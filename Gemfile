@@ -38,8 +38,8 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
-#  gem 'capybara', '~> 2.13'
-#  gem 'selenium-webdriver'
+  gem 'capybara', '~> 2.13'
+  gem 'selenium-webdriver'
 end
 
 group :development do
@@ -60,7 +60,8 @@ end
 gem 'bootstrap-sass'
 gem 'gibbon'
 gem 'high_voltage'
-gem 'simple_form'
+# Removed simple_form, use form_with in Rails 5.1
+# gem 'simple_form'
 gem 'sendgrid-ruby'
 
 group :development do
@@ -77,5 +78,3 @@ group :test do
   gem 'minitest-spec-rails'
   gem 'minitest-rails-capybara'
 end
-
-
