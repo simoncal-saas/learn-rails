@@ -11,7 +11,8 @@ class ContactsController < ApplicationController
       flash[:notice] = "Message sent from #{@contact.name}."
       redirect_to root_path
     else
-      render :new
+      flash[:alert] = "Missing Name, Email or Message."
+      redirect_to new_contact_path
     end
   end
 
